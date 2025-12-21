@@ -380,7 +380,7 @@
         height: 63px;
       }
 
-      #skill-card-1,
+#skill-card-1,
       #skill-card-2,
       #skill-card-3,
       #skill-card-4,
@@ -390,15 +390,36 @@
         border-radius: 20px;
         padding-top: $space-200;
         padding-bottom: $space-200;
+        
+        /* 1. Posizionamento fondamentale */
         position: relative;
+        z-index: 1; 
+        overflow: hidden; /* Assicura che l'immagine non esca dai bordi arrotondati */
+        
         display: flex;
         align-items: center;
         justify-content: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: height 0.3s ease-out, color 0s linear;
+        
+        /* 2. Rimuovi le proprietà background-* da qui, le spostiamo nel ::before */
+        
+        transition: height 0.3s ease-out, color 0.2s linear; // Ho dato 0.2s al colore per renderlo meno brusco
         height: 100%;
+
+        /* 3. IL TRUCCO: Creiamo un livello separato per l'immagine */
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          opacity: 0;       /* Invisibile di default */
+          z-index: -1;      /* Sta dietro al testo */
+          transition: opacity 0.3s ease-in-out; /* Dissolvenza fluida */
+        }
 
         @include media-breakpoint-up(lg) {
           height: 55px;
@@ -407,6 +428,11 @@
           &:hover {
             color: transparent;
             height: 80px;
+
+            /* 4. All'hover, rendiamo visibile il livello immagine */
+            &::before {
+              opacity: 1;
+            }
           }
         }
       }
@@ -430,29 +456,13 @@
   }
 
   @include media-breakpoint-up(lg) {
-    #skill-card-1:hover {
-      background-image: url('../assets/1.jpg');
-    }
-
-    #skill-card-2:hover {
-      background-image: url('../assets/2.jpg');
-    }
-
-    #skill-card-3:hover {
-      background-image: url('../assets/3.jpg');
-    }
-
-    #skill-card-4:hover {
-      background-image: url('../assets/4.jpg');
-    }
-
-    #skill-card-5:hover {
-      background-image: url('../assets/5.jpg');
-    }
-
-    #skill-card-6:hover {
-      background-image: url('../assets/6.jpg');
-    }
+    /* 5. Applichiamo l'immagine allo PSEUDO-ELEMENTO ::before, non alla card */
+    #skill-card-1::before { background-image: url('../assets/1.jpg'); }
+    #skill-card-2::before { background-image: url('../assets/2.jpg'); }
+    #skill-card-3::before { background-image: url('../assets/3.jpg'); }
+    #skill-card-4::before { background-image: url('../assets/4.jpg'); }
+    #skill-card-5::before { background-image: url('../assets/5.jpg'); }
+    #skill-card-6::before { background-image: url('../assets/6.jpg'); }
   }
 }
 
