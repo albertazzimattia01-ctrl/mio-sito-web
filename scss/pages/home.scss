@@ -431,27 +431,27 @@
 
   @include media-breakpoint-up(lg) {
     #skill-card-1:hover {
-      background-image: url('./assets/1.jpg');
+      background-image: url('../assets/1.jpg');
     }
 
     #skill-card-2:hover {
-      background-image: url('./assets/2.jpg');
+      background-image: url('../assets/2.jpg');
     }
 
     #skill-card-3:hover {
-      background-image: url('./assets/3.jpg');
+      background-image: url('../assets/3.jpg');
     }
 
     #skill-card-4:hover {
-      background-image: url('./assets/4.jpg');
+      background-image: url('../assets/4.jpg');
     }
 
     #skill-card-5:hover {
-      background-image: url('./assets/5.jpg');
+      background-image: url('../assets/5.jpg');
     }
 
     #skill-card-6:hover {
-      background-image: url('./assets/6.jpg');
+      background-image: url('../assets/6.jpg');
     }
   }
 }
