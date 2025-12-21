@@ -1,0 +1,219 @@
+//FOOTER
+#footer-background {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 500px;
+  background-color: #{map-get($theme-colors, "secondary-400")};
+
+  @include media-breakpoint-up(md) {
+    height: 400px;
+  }
+}
+
+footer {
+  position: relative;
+  margin-top: $space-800;
+  height: 665px;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    height: 515px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $space-950;
+  }
+
+  #footer-content {
+    width: 100%;
+    height: 400px;
+    padding-top: 50px;
+    gap: 0;
+
+    #footer-left {
+      position: relative;
+
+      @include media-breakpoint-only(md) {
+        padding-top: $space-300;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 0;
+      }
+
+      picture {
+        position: absolute;
+        top: 50%;
+        right: auto;
+        transform: translateY(-55%);
+
+        @include media-breakpoint-only(md) {
+          top: 60%;
+          right: -30%;
+        }
+      }
+
+      h2 {
+        z-index: 1;
+        margin-bottom: $space-700;
+      }
+
+      #btn-primary-big {
+        @include btn-primary-big(hsl(24, 92%, 47%));
+        border: none;
+      }
+    }
+
+    #footer-right {
+      margin-bottom: 220px;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 50px;
+        margin-bottom: 0;
+      }
+
+      #actions {
+        margin-bottom: $space-600;
+        margin-top: $space-900;
+
+        @include media-breakpoint-up(md) {
+          margin-top: 0;
+          margin-bottom: $space-700;
+        }
+
+        #logo-img-footer {
+          width: auto;
+          height: auto;
+          margin-bottom: $space-50;
+        }
+
+        #icons a i {
+          color: #{map-get($theme-colors, "neutral-200")};
+        }
+
+        #icons a:hover {
+          border-bottom: solid $border-200 map-get($theme-colors, "neutral-200");
+        }
+      }
+    }
+
+    #small-copy {
+      a {
+        color: rgba(map-get($theme-colors, "neutral-200"), 0.6);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 2px;
+        will-change: transform;
+        transition: all 0.3s ease-out;
+
+
+        &:hover {
+          color: #{map-get($theme-colors, "secondary-500")};
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+// footer {
+//   position: relative;
+//   margin-top: $space-800;
+//   // background-color: #{map-get($theme-colors, "primary-150")};
+
+//   @include media-breakpoint-up(lg) {
+//     margin-top: $space-950;
+//   }
+
+//   #footer-content {
+//     width: 100%;
+//     margin-top: 0;
+//     margin-bottom: 0;
+//     padding-bottom: $space-500;
+//   }
+
+//   #footer-top {
+//     width: 100%;
+//     height: 120px;
+
+//     background-image: url('/assets/footer-576.png');
+//     background-size: cover;
+//     background-position: center;
+//     margin-bottom: $space-700;
+
+//     @include media-breakpoint-up(sm) {
+//       background-image: url('/assets/footer-1440_2.png');
+//     }
+
+//     @include media-breakpoint-up(lg) {
+//       height: 175px;
+//       background-image: url('/assets/footer-1440.png');
+//     }
+
+//     @media screen and (min-width:1440px) {
+//       background-image: url('/assets/footer-2560.png');
+//     }
+//   }
+
+//   #box-1 {
+
+//     @include media-breakpoint-up(md) {
+//       margin-bottom: $space-700;
+//     }
+
+//     #btn-primary-footer {
+//       @include btn-primary-footer(hsl(204, 94%, 35%));
+//       border: none;
+//       margin-bottom: $space-400;
+
+//       @include media-breakpoint-up(md) {
+//         margin-bottom: 0;
+//       }
+//     }
+
+//     #secondary-action-footer {
+//       @include media-breakpoint-up(md) {
+//         margin-left: 33px;
+//       }
+//     }
+
+//     #box-2 {
+//       width: 100%;
+//       margin-top: $space-500;
+//       margin-bottom: $space-700;
+
+//       @include media-breakpoint-up(md) {
+//         width: auto;
+//         margin-top: 0;
+//         margin-bottom: 0;
+//       }
+
+//       #logo-img-footer {
+//         width: 122px;
+//         height: auto;
+
+//         @include media-breakpoint-up(md) {
+//           margin-bottom: $space-200;
+//         }
+//       }
+
+//       #icons a i {
+//         color: #{map-get($theme-colors, "neutral-200")};
+//       }
+
+//       #icons a:hover {
+//         border-bottom: solid $border-200 map-get($theme-colors, "neutral-200");
+//       }
+//     }
+//   }
+
+//   #box-3 p {
+//     font-family: $font-body;
+//     font-size: $fs-sm;
+//     color: #{map-get($theme-colors, "neutral-200")};
+//     margin-bottom: 0 !important;
+//   }
+// }

@@ -1,0 +1,50 @@
+// per personalizzare testo
+@mixin text-style($size-min, $size-max, $breakpoint: md, $family, $weight, $line-height, $ls, $transform, $color) {
+  font-family: $family;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-transform: $transform;
+  color: $color;
+
+  @if type-of($ls)==number {
+    letter-spacing: #{$ls / 100}em;
+  }
+
+  @else {
+    letter-spacing: $ls;
+  }
+
+  font-size: $size-min;
+
+  @include media-breakpoint-up($breakpoint) {
+    font-size: $size-max;
+  }
+}
+
+@mixin text-style-2($size-min, $size-md, $size-max, $family, $weight, $line-height, $ls, $transform, $color) {
+  font-family: $family;
+  font-weight: $weight;
+  line-height: $line-height;
+  text-transform: $transform;
+  color: $color;
+
+  @if type-of($ls)==number {
+    letter-spacing: #{$ls / 100}em;
+  }
+
+  @else {
+    letter-spacing: $ls;
+  }
+
+  font-size: $size-min;
+
+  @include media-breakpoint-up(sm) {
+    font-size: $size-md;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: $size-max;
+  }
+}
+
+

@@ -1,0 +1,84 @@
+//Common specs for all sections
+#about-me-content,
+#skills-content,
+#progetti-content,
+#footer-content,
+#about-main,
+#progetti-main,
+#cnt-main {
+  justify-content: center;
+  padding-left: $space-300;
+  padding-right: $space-300;
+
+  @include media-breakpoint-up(sm) {
+    gap: $space-200;
+    padding-left: $space-700;
+    padding-right: $space-700;
+  }
+
+  @include media-breakpoint-up(md) {
+    gap: $space-300;
+  }
+
+  @include media-breakpoint-up(lg) {
+    justify-content: space-between;
+    gap: $space-800;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: $space-950;
+    padding-right: $space-950;
+  }
+
+  #about-me-text,
+  #skills-text,
+  #progetti-text,
+  #cnt-text {
+    border-top-left-radius: $radius-600;
+    border-bottom-right-radius: $radius-600;
+    padding: $space-300;
+
+    @include media-breakpoint-up (lg) {
+      padding: $space-600;
+    }
+  }
+
+  h2 {
+    margin-bottom: $space-200;
+  }
+}
+
+//Specific adjustments for some sections of the Home page
+#about-me-content,
+#skills-content,
+#progetti-content {
+  margin-top: $space-800;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $space-950;
+  }
+
+  @include media-breakpoint-up(xl) {
+    padding-left: $space-950;
+    padding-right: $space-950;
+  }
+}
+
+//Settings secondary pages
+#about-main,
+#progetti-main,
+#cnt-main {
+  margin-top: $space-700;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: $space-850;
+  }
+
+  #h1 {
+    margin-bottom: 13px !important;
+  }
+}
+
+#txt-description {
+  margin-bottom: 24px;
+}

@@ -1,0 +1,215 @@
+//ABOUT PAGE
+
+#about-main {
+  article {
+
+    #text-1,
+    #text-2,
+    #text-3 {
+      padding: $space-300;
+
+      @include media-breakpoint-up(md) {
+        width: 60%;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding: $space-500;
+      }
+
+      #h3 {
+        margin-bottom: $space-200;
+      }
+    }
+
+    #paragraph-1 {
+      #text-1 {
+        background-color: #{map-get($theme-colors, secondary-400)};
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+    }
+
+    #paragraph-2 {
+      #text-2 {
+        background-color: #{map-get($theme-colors, tertiary-400)};
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+    }
+
+    #paragraph-3 {
+      #text-3 {
+        background-color: #{map-get($theme-colors, primary-150)};
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+    }
+
+    #paragraph-1,
+    #paragraph-2 {
+      margin-bottom: $space-800;
+    }
+
+    #pic-right,
+    #pic-left {
+      margin-top: $space-500;
+
+      @include media-breakpoint-up(md) {
+        width: 40%;
+        margin-top: 0;
+      }
+
+      >svg {
+        width: 60%;
+        height: 60%;
+        object-fit: fill;
+
+        @include media-breakpoint-up(md) {
+          width: 85%;
+          height: 85%;
+        }
+      }
+    }
+
+    #paragraph-3 svg {
+      @include media-breakpoint-up(md) {
+        width: 65%;
+        height: 65%;
+      }
+    }
+
+    #pic-right {
+      @include media-breakpoint-up(md) {
+        margin-left: $space-500;
+      }
+    }
+
+    #pic-left {
+      @include media-breakpoint-up(md) {
+        margin-right: $space-500;
+      }
+    }
+
+    #btn-primary-xl-arrow {
+      margin-top: $space-500;
+    }
+
+    #paragraph-1 {
+
+      #ruota-1,
+      #ruota-4 {
+        animation: ruote-dx 12s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+
+      #ruota-2,
+      #ruota-3 {
+        animation: ruote-sx 12s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+
+      #Vector_17 {
+        animation: luce 1.5s ease-in-out infinite alternate;
+      }
+
+      @keyframes ruote-dx {
+        from {
+          transform: rotateZ(0deg);
+        }
+
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+
+      @keyframes ruote-sx {
+        from {
+          transform: rotateZ(0deg);
+        }
+
+        to {
+          transform: rotateZ(-360deg);
+        }
+      }
+
+      @keyframes luce {
+        from {
+          fill: #F8C917;
+        }
+
+        to {
+          fill: #F87517;
+        }
+      }
+    }
+
+    #paragraph-2 {
+      #ux {
+        animation: ux 2s alternate infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+
+      #ui {
+        animation: ui 2s alternate infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+      }
+
+      @keyframes ux {
+        from {
+          transform: scale(1) translateY(0);
+        }
+
+        to {
+          transform: scale(1.1) translateY(-20px);
+        }
+      }
+
+      @keyframes ui {
+        from {
+          transform: scale(1) rotateZ(0deg);
+        }
+
+        to {
+          transform: scale(0.9) rotateZ(-10deg);
+        }
+      }
+    }
+
+    #paragraph-3 {
+      #Pizza-ruota {
+        animation: pizza 2s alternate infinite;
+      }
+
+      #braccio-pizza {
+        animation: braccio 2s alternate infinite;
+        transform-origin: bottom;
+      }
+
+      @keyframes pizza {
+        from {
+          transform: translateY(0) rotateX(0deg);
+        }
+
+        to {
+          transform: translateY(-10px) rotateX(35deg);
+        }
+      }
+
+      @keyframes braccio {
+        from {
+          transform: rotateX(-7deg);
+        }
+
+        to {
+          transform: rotateX(10deg);
+        }
+      }
+    }
+
+  }
+}

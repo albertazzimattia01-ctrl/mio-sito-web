@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Contattami per collaborazioni, domande o informazioni. Compila il modulo e ti risponderò al più presto.">
+  <title>Contattami | Mattia Albertazzi, UX/UI Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/site.webmanifest">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <header id="header">
+    <div id="header-content" class="container-xxl px-0">
+      <nav>
+        <a href="index.html" id="logo">
+          <img src="../assets/logo-header.svg" id="logo-img" alt="logo del sito">
+        </a>
+        <input class="menu-btn" id="menu-btn" type="checkbox" aria-controls="menu-box"
+          aria-label="Apri menu di navigazione">
+        <label for="menu-btn" class="menu-icon" aria-haspopup="true">
+          <span class="nav-icon"></span>
+        </label>
+        <label for="menu-btn" id="overlay" aria-hidden="true"></label>
+        <div id="menu-box" role="navigation" aria-hidden="true">
+          <ul id="menu" class="list-unstyled m-0 p-0">
+            <li id="menu_list_tag"><a href="about.html">ABOUT</a></li>
+            <li id="menu_list_tag"><a href="progetti.html">PROGETTI</a></li>
+            <li id="menu_list_tag" class="menu_list_tag_selected" aria-current="page">CONTATTO</li>
+          </ul>
+        </div>
+        <div id="menu-big" class="d-none d-lg-flex align-items-center justify-content-end pe-5" role="navigation">
+          <ul id="menu-big-tags"
+            class="list-unstyled d-flex justify-content-between text-center align-items-center m-0 p-0">
+            <li id="menu_list_tag"><a href="about.html">ABOUT</a></li>
+            <li id="menu_list_tag"><a href="progetti.html">PROGETTI</a></li>
+            <li id="menu_list_tag" class="menu_list_tag_selected" aria-current="page">CONTATTO</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="cnt-main" class="container-xxl">
+    <div id="cnt-text" class="bg-primary-150">
+      <h1 id="cnt-title">CONNETTITI CON ME</h1>
+      <p id="txt-description">Che si tratti di lavoro o di semplice networking, sarò felice di ricontattarti!</p>
+      <div id="cnt-info" class="d-flex align-items-start align-items-sm-center align-items-md-start align-items-lg-center justify-content-between flex-column flex-sm-row flex-md-column flex-lg-row">
+        <div id="cnt-inf-sx" class="d-flex align-items-center">
+          <div id="cnt-info-pic" class="d-flex justify-content-center">
+            <img src="../assets/contatto/mattia.webp" alt="Foto di Mattia in primo piano">
+          </div>
+          <div id="cnt-info-text" class="d-flex flex-column">
+            <p id="normal-copy">Mattia Albertazzi</p>
+            <div class="d-flex align-items-end">
+              <i class="bi bi-geo-alt-fill me-2 text-neutral-200"></i>
+              <p id="small-copy" class="m-0 text-neutral-200">Imola, BO</p>
+            </div>
+          </div>
+        </div>
+        <div id="cnt-info-dx">
+          <div id="icons" class="d-flex justify-content-center align-items-center gap-2">
+            <a href="https://www.behance.net/mattia-albertazzi" target="_blank"
+              aria-label="Vai alla mia pagina di Behance" title="Vai a Behance"><i class="bi bi-behance"></i></a>
+            <a href="https://www.linkedin.com/in/mattia-albertazzi/" target="_blank"
+              aria-label="Vai alla mia pagina di Linkedin" title="Vai a Linkdedin"><i class="bi bi-linkedin"></i></a>
+            <a href="../assets/about/mattia-albertazzi-cv.pdf" target="_blank"
+              aria-label="Apri il mio CV" title="Apri il mio CV"><i class="bi bi-file-earmark-person-fill"></i></a>
+          </div>
+        </div>
+      </div>
+      <img src="../assets/contatto/cnt-pic.svg" aria-hidden="true" id="cnt-illustration" class="d-none d-md-block">
+    </div>
+    <div id="form-container">
+      <form action="https://formspree.io/f/myznzrjj" method="POST">
+        <fieldset>
+          <div id="field">
+            <label for="nome" id="small-copy-field">nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div id="field">
+            <label for="cognome" id="small-copy-field">cognome</label>
+            <input type="text" id="cognome" name="cognome" required>
+          </div>
+
+          <div id="field">
+            <label for="email" id="small-copy-field">email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div id="field">
+            <label for="messaggio" id="small-copy-field">il tuo messaggio</label>
+            <textarea id="messaggio" name="messaggio" rows="6" required></textarea>
+          </div>
+        </fieldset>
+        <div id="actions" class="d-flex flex-column">
+          <p id="small-copy">Inviando questo modulo, accetti che i tuoi dati vengano utilizzati esclusivamente per
+            ricontattarti.</p>
+          <button type="submit" id="btn-primary-normal">Invia</button>
+          <!-- <button type="reset" id="secondary-action">Reset</button> -->
+        </div>
+      </form>
+    </div>
+  </main>
+</body>

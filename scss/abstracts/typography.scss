@@ -1,0 +1,208 @@
+@import '../../bootstrap/scss/functions';
+@import '../../bootstrap/scss/variables';
+@import '../../bootstrap/scss/mixins';
+@import '../../bootstrap/scss/bootstrap';
+@import './variables.scss';
+@import './mixin_buttons.scss';
+@import './mixin_text.scss';
+
+
+
+
+#h1 {
+  @include text-style($fs-h1-min,
+    $fs-h1-max,
+    lg, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $heavy, // font-weight
+    1.2, // line-height
+    3, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#h2 {
+  @include text-style($fs-h2-min,
+    $fs-h2-max,
+    lg, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $extrabold, // font-weight
+    1.2, // line-height
+    3, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#footer-title {
+  @include text-style($fs-h2-min,
+    $fs-h2-max,
+    lg, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $regular, // font-weight
+    1.2, // line-height
+    3, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#footer-span {
+  @include text-style($fs-xxxl,
+    $fs-4xl,
+    lg, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $extrabold, // font-weight
+    1.2, // line-height
+    2, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "primary-500") // color
+  );
+}
+
+#h3 {
+  @include text-style($fs-h3-min,
+    $fs-h3-max,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $extrabold, // font-weight
+    1.4, // line-height
+    3, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#menu_list_tag {
+  @include text-style($fs-base,
+    $fs-base,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $bold, // font-weight
+    1.5, // line-height
+    3, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#skill-card-1,
+#skill-card-2,
+#skill-card-3,
+#skill-card-4,
+#skill-card-5,
+#skill-card-6 {
+  @include text-style($fs-base,
+    $fs-base,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $medium, // font-weight
+    1.5, // line-height
+    3, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+
+  &:hover {
+    transition: none;
+  }
+}
+
+#normal-copy {
+  @include text-style($fs-base,
+    $fs-base,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $regular, // font-weight
+    1.5, // line-height
+    1, // letter-spacing (0.03em)
+    none, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#small-copy {
+  @include text-style($fs-sm,
+    $fs-sm,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $regular, // font-weight
+    1.5, // line-height
+    1, // letter-spacing (0.03em)
+    none, // text-transform
+    rgba(map-get($theme-colors, "neutral-200"), 0.6) // color
+  );
+}
+
+#small-copy-field {
+  @include text-style($fs-sm,
+    $fs-sm,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $bold, // font-weight
+    1.5, // line-height
+    1, // letter-spacing (0.03em)
+    none, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#txt-description {
+  @include text-style($fs-lg,
+    $fs-lg,
+    md, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $regular, // font-weight
+    1.5, // line-height
+    1, // letter-spacing (0.03em)
+    none, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+
+#label-card {
+  @include text-style-2($fs-label-min, $fs-label-md,
+    $fs-label-max,
+    $font-primary, // font-family
+    $regular, // font-weight
+    1.5, // line-height
+    1, // letter-spacing (0.03em)
+    uppercase, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#cnt-title {
+  @include text-style($fs-x,
+    $fs-h2-max,
+    lg, // da md in poi blocca fs-max
+    $font-primary, // font-family
+    $extrabold, // font-weight
+    1.5, // line-height
+    3, // letter-spacing (0.03em)
+    none, // text-transform
+    map-get($theme-colors, "neutral-200") // color
+  );
+}
+
+#secondary-action {
+  @include link-style($fs-base,
+    $font-primary,
+    $bold,
+    1.5,
+    1,
+    uppercase,
+    map-get($theme-colors, "secondary-600"));
+}
+
+#secondary-action-footer {
+  @include link-style-footer($fs-base,
+    $font-primary,
+    $bold,
+    1.5,
+    1,
+    uppercase,
+    map-get($theme-colors, "neutral-200"));
+}
