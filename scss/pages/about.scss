@@ -54,6 +54,7 @@
     #pic-right,
     #pic-left {
       margin-top: $space-500;
+      width: 100%;
 
       @include media-breakpoint-up(md) {
         width: 40%;
