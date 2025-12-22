@@ -6,7 +6,7 @@ $enable-responsive-font-sizes: false;
 @import '../bootstrap/scss/variables';
 @import '../bootstrap/scss/mixins';
 
-$theme-colors: map-merge($theme-colors, (
+$theme-colors: map-merge($theme-colors, ( 
       "primary-150": #ffdfc7,
       "primary-400": #f39569,
       "primary-500": #e6620a,
@@ -38,6 +38,7 @@ $theme-colors: map-merge($theme-colors, (
 @import './pages/home.scss';
 @import './pages/about.scss';
 @import './pages/contatto.scss';
+
 
 
 //RESETS    
