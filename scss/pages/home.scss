@@ -37,7 +37,7 @@
     margin-bottom: 11px;
     position: relative;
 
-    #hero-accent{
+    #hero-accent {
       position: absolute;
       left: -40px;
       top: -40px;
@@ -198,13 +198,21 @@
   gap: $space-300;
 }
 
-#icons a:hover {
-  border-bottom: solid $border-200 map-get($theme-colors, "secondary-600");
+@include media-breakpoint-up(lg) {
+  @media (hover: hover) {
+    #icons a:hover {
+      border-bottom: solid $border-200 map-get($theme-colors, "secondary-600");
+    }
+  }
 }
 
-#icons a:active {
-  transform: scale(0.95);
+@include media-breakpoint-down(lg) {
+  #icons a:active {
+    border-bottom: solid $border-200 map-get($theme-colors, "secondary-600");
+  }
 }
+
+
 
 #hero-right {
   height: 100%;
@@ -380,7 +388,7 @@
         height: 63px;
       }
 
-#skill-card-1,
+      #skill-card-1,
       #skill-card-2,
       #skill-card-3,
       #skill-card-4,
@@ -390,18 +398,19 @@
         border-radius: 20px;
         padding-top: $space-200;
         padding-bottom: $space-200;
-        
+
         /* 1. Posizionamento fondamentale */
         position: relative;
-        z-index: 1; 
-        overflow: hidden; /* Assicura che l'immagine non esca dai bordi arrotondati */
-        
+        z-index: 1;
+        overflow: hidden;
+        /* Assicura che l'immagine non esca dai bordi arrotondati */
+
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         /* 2. Rimuovi le proprietà background-* da qui, le spostiamo nel ::before */
-        
+
         transition: height 0.3s ease-out, color 0.2s linear; // Ho dato 0.2s al colore per renderlo meno brusco
         height: 100%;
 
@@ -416,9 +425,12 @@
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
-          opacity: 0;       /* Invisibile di default */
-          z-index: -1;      /* Sta dietro al testo */
-          transition: opacity 0.3s ease-in-out; /* Dissolvenza fluida */
+          opacity: 0;
+          /* Invisibile di default */
+          z-index: -1;
+          /* Sta dietro al testo */
+          transition: opacity 0.3s ease-in-out;
+          /* Dissolvenza fluida */
         }
 
         @include media-breakpoint-up(lg) {
@@ -456,13 +468,31 @@
   }
 
   @include media-breakpoint-up(lg) {
+
     /* 5. Applichiamo l'immagine allo PSEUDO-ELEMENTO ::before, non alla card */
-    #skill-card-1::before { background-image: url('../assets/1.jpg'); }
-    #skill-card-2::before { background-image: url('../assets/2.jpg'); }
-    #skill-card-3::before { background-image: url('../assets/3.jpg'); }
-    #skill-card-4::before { background-image: url('../assets/4.jpg'); }
-    #skill-card-5::before { background-image: url('../assets/5.jpg'); }
-    #skill-card-6::before { background-image: url('../assets/6.jpg'); }
+    #skill-card-1::before {
+      background-image: url('../assets/1.jpg');
+    }
+
+    #skill-card-2::before {
+      background-image: url('../assets/2.jpg');
+    }
+
+    #skill-card-3::before {
+      background-image: url('../assets/3.jpg');
+    }
+
+    #skill-card-4::before {
+      background-image: url('../assets/4.jpg');
+    }
+
+    #skill-card-5::before {
+      background-image: url('../assets/5.jpg');
+    }
+
+    #skill-card-6::before {
+      background-image: url('../assets/6.jpg');
+    }
   }
 }
 

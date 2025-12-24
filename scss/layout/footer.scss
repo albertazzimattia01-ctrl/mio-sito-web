@@ -92,8 +92,18 @@ footer {
           color: #{map-get($theme-colors, "neutral-200")};
         }
 
-        #icons a:hover {
-          border-bottom: solid $border-200 map-get($theme-colors, "neutral-200");
+        @include media-breakpoint-up(lg) {
+          @media (hover: hover) {
+            #icons a:hover {
+              border-bottom: solid $border-200 map-get($theme-colors, "neutral-200");
+            }
+          }
+        }
+
+        @include media-breakpoint-down(lg) {
+          #icons a:active {
+            border-bottom: solid $border-200 map-get($theme-colors, "neutral-200");
+          }
         }
       }
     }

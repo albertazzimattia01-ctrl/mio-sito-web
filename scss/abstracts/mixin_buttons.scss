@@ -16,8 +16,18 @@
   transition: transform .3s ease-out, background-color .3s ease-out;
   display: inline-block;
 
-  &:hover {
-    background-color: #{map-get($theme-colors, "primary-400")};
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
+        background-color: #{map-get($theme-colors, "primary-400")};
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &:active {
+      background-color: #{map-get($theme-colors, "primary-400")};
+    }
   }
 }
 
@@ -39,8 +49,18 @@
   transition: transform .3s ease-out, background-color .3s ease-out;
   display: inline-block;
 
-  &:hover {
-    background-color: #{map-get($theme-colors, "secondary-500")};
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
+        background-color: #{map-get($theme-colors, "secondary-500")};
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &:active {
+      background-color: #{map-get($theme-colors, "secondary-500")};
+    }
   }
 }
 
@@ -62,8 +82,18 @@
   transition: transform .3s ease-out, background-color .3s ease-out;
   display: inline-block;
 
-  &:hover {
-    background-color: #{map-get($theme-colors, "primary-400")};
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
+        background-color: #{map-get($theme-colors, "primary-400")};
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &:active {
+      background-color: #{map-get($theme-colors, "primary-400")};
+    }
   }
 }
 
@@ -124,20 +154,33 @@
   }
 
   // effetti sull'hover
-  &:hover {
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
 
-    #text-box,
-    #arrow-box {
-      background-color: #{map-get($theme-colors, "primary-400")};
-    }
+        #text-box,
+        #arrow-box {
+          background-color: #{map-get($theme-colors, "primary-400")};
+        }
 
-    @include media-breakpoint-up(lg) {
-      #arrow-box {
-        width: calc(100% - 95px);
+        #text-box {
+          width: calc(100% - 95px);
+        }
+
+        #arrow-box img {
+          transform: translateX(12px);
+        }
       }
+    }
+  }
 
-      #arrow-box img {
-        transform: translateX(12px);
+  //effetti sull'active
+  @include media-breakpoint-down(lg) {
+    &:active {
+
+      #text-box,
+      #arrow-box {
+        background-color: #{map-get($theme-colors, "primary-400")};
       }
     }
   }
@@ -249,20 +292,33 @@
   }
 
   // effetti sull'hover
-  &:hover {
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
 
-    #text-box,
-    #arrow-box {
-      background-color: #{map-get($theme-colors, "primary-400")};
-    }
+        #text-box,
+        #arrow-box {
+          background-color: #{map-get($theme-colors, "primary-400")};
+        }
 
-    @include media-breakpoint-up(lg) {
-      #text-box {
-        width: calc(100% - 220px);
+        #text-box {
+          width: calc(100% - 220px);
+        }
+
+        #arrow-box img {
+          transform: translateX(16px);
+        }
       }
+    }
+  }
 
-      #arrow-box img {
-        transform: translateX(16px);
+  //effetti sull'active
+  @include media-breakpoint-down(lg) {
+    &:active {
+
+      #text-box,
+      #arrow-box {
+        background-color: #{map-get($theme-colors, "primary-400")};
       }
     }
   }
@@ -300,9 +356,20 @@
 
   font-size: $size;
 
-  &:hover {
-    text-decoration-color: #{map-get($theme-colors, "secondary-500")};
-    color: #{map-get($theme-colors, "secondary-500")};
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
+        text-decoration-color: #{map-get($theme-colors, "secondary-500")};
+        color: #{map-get($theme-colors, "secondary-500")};
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &:active {
+      text-decoration-color: #{map-get($theme-colors, "secondary-500")};
+      color: #{map-get($theme-colors, "secondary-500")};
+    }
   }
 }
 
@@ -338,9 +405,20 @@
 
   font-size: $size;
 
-  &:hover {
-    text-decoration-color: #{map-get($theme-colors, "neutral-300")};
-    color: #{map-get($theme-colors, "neutral-300")};
+  @include media-breakpoint-up(lg) {
+    @media (hover: hover) {
+      &:hover {
+        text-decoration-color: #{map-get($theme-colors, "neutral-300")};
+        color: #{map-get($theme-colors, "neutral-300")};
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &:active {
+      text-decoration-color: #{map-get($theme-colors, "neutral-300")};
+      color: #{map-get($theme-colors, "neutral-300")};
+    }
   }
 }
 
